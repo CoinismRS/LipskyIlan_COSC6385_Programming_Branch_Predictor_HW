@@ -18,33 +18,6 @@ the loop predictor. For comparison, the bimodal table alone gets 10.267, and
 the kit's 32K-entry gshare gets 6.306 while using about twice the storage. See [REPORT.md](REPORT.md) (also included as
 `REPORT.pdf`) for the design, verification and results.
 
-## Repository layout
-
-```
-.
-├── README.md                      this file
-├── REPORT.md / REPORT.pdf         report: what was done + results
-├── figures/                       charts used in the report
-├── results/
-│   ├── run_output.txt             output of ./run.sh traces (submitted predictor)
-│   ├── experiments.csv            all 20 traces x 36 predictor configurations
-│   ├── summary_tables.md          tables generated from experiments.csv
-│   └── test_output.txt            output of make test (both unit tests)
-├── tools/make_figures.py          regenerates figures/ and summary_tables.md
-└── cbp2-infrastructure-v2/        simulation kit (original files + my changes)
-    ├── run                        original csh driver (needs csh + dc)
-    ├── run.sh                     bash equivalent of run          [added]
-    ├── run_experiments.sh         design-space sweep -> results/   [added]
-    ├── test/test_example.cc       replays the handout's worked example [added]
-    ├── test/test_loop.cc          loop predictor unit tests        [added]
-    ├── traces/                    20 CBP-2 traces (.bz2)
-    └── src/
-        ├── my_predictor.h         pm_predictor implementation      [modified]
-        ├── experiments.cc         multi-predictor experiment driver [added]
-        ├── Makefile               added experiments / test targets  [modified]
-        └── predict.cc, trace.cc, ...  unchanged kit files
-```
-
 ## Requirements
 
 * Linux or macOS with `g++` (any C++98 or newer compiler) and `make`.
@@ -137,14 +110,6 @@ left as the kit's stub. Because there is no BTB, the "LPB hit requires a
 BTB hit" condition is treated as always true. The PIR is replaced by a global outcome-history
 register, which the assignment also allows. A PIR variant is included as an
 experiment.
-
-## Getting the code
-
-```bash
-git clone https://github.com/CoinismRS/LipskyIlan_COSC6385_Programming_Branch_Predictor_HW.git
-```
-
-Build outputs are excluded by `.gitignore`.
 
 ## Credits
 
