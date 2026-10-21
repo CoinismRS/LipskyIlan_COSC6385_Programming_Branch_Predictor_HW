@@ -3,6 +3,8 @@ title: "Assignment 1: Pentium M Hybrid Branch Predictor"
 subtitle: "Bimodal, global and loop predictors on the CBP-2 trace infrastructure"
 ---
 
+**GitHub repository:** <https://github.com/CoinismRS/LipskyIlan_COSC6385_Programming_Branch_Predictor_HW>
+
 # 1. Summary
 
 I implemented the branch-direction part of the Pentium M predictor in the

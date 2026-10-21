@@ -1,5 +1,7 @@
 # Pentium M Hybrid Branch Predictor (Assignment 1)
 
+**GitHub repository:** <https://github.com/CoinismRS/LipskyIlan_COSC6385_Programming_Branch_Predictor_HW>
+
 This repository is a C++ implementation of the branch-direction predictor
 used in the Intel Pentium M. It has three parts:
 
@@ -136,17 +138,13 @@ BTB hit" condition is treated as always true. The PIR is replaced by a global ou
 register, which the assignment also allows. A PIR variant is included as an
 experiment.
 
-## Submitting to GitHub
+## Getting the code
 
 ```bash
-cd pentium-m-branch-predictor
-git init -b main && git add -A && git commit -m "Pentium M hybrid branch predictor"
-git remote add origin https://github.com/<you>/<repo>.git
-git push -u origin main
+git clone https://github.com/CoinismRS/LipskyIlan_COSC6385_Programming_Branch_Predictor_HW.git
 ```
 
-Build outputs are excluded by `.gitignore`. The traces are about 8 MB in
-total, well within GitHub's limits.
+Build outputs are excluded by `.gitignore`.
 
 ## Credits
 
