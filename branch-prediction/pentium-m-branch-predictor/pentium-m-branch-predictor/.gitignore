@@ -1,0 +1,7 @@
+cbp2-infrastructure-v2/src/predict
+cbp2-infrastructure-v2/src/predict_extra_credit
+cbp2-infrastructure-v2/src/experiments
+cbp2-infrastructure-v2/src/test_example
+cbp2-infrastructure-v2/src/test_loop
+*.o
+__pycache__/

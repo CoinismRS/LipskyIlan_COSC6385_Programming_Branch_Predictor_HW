@@ -1,0 +1,39 @@
+step br  addr  out  GHR  hash row tag  lctr local global final
+   1 b1  0x44  T    0000 0001   0  01     1     N      -     N
+   2 b3  0x90  T    0001 0101   1  01     0     N      -     N
+   3 b1  0x44  NT   0011 0010   0  10     2     T      -     T
+   4 b2  0x6C  NT   0110 1101   3  01     3     T      -     T
+   5 b3  0x90  T    1100 1000   2  00     1     N      -     N
+   6 b1  0x44  T    1001 1000   2  00     1     N      T     T
+   7 b3  0x90  T    0011 0111   1  11     2     T      -     T
+   8 b1  0x44  NT   0111 0110   1  10     2     T      -     T
+   9 b2  0x6C  NT   1110 0101   1  01     2     T      -     T
+  10 b3  0x90  T    1100 1000   2  00     3     T      T     T
+  11 b1  0x44  NT   1001 1000   2  00     1     N      T     T
+  12 b2  0x6C  T    0010 1001   2  01     1     N      -     N
+  13 b1  0x44  NT   0101 0100   1  00     0     N      -     N
+  14 b2  0x6C  NT   1010 0001   0  01     2     T      N     N
+  15 b3  0x90  T    0100 0000   0  00     3     T      -     T
+  16 b1  0x44  T    1001 1000   2  00     0     N      T     T
+  17 b3  0x90  T    0011 0111   1  11     3     T      -     T
+  18 b1  0x44  NT   0111 0110   1  10     1     N      -     N
+  19 b2  0x6C  NT   1110 0101   1  01     1     N      -     N
+  20 b3  0x90  T    1100 1000   2  00     3     T      T     T
+  21 b1  0x44  T    1001 1000   2  00     0     N      T     T
+  22 b3  0x90  T    0011 0111   1  11     3     T      -     T
+
+PASS: all 22 steps and both global-table snapshots match the handout.
+taken loop    body= 1 : LPB used   40/  40, LPB misses 0, total misses 0
+taken loop    body= 3 : LPB used   80/  80, LPB misses 0, total misses 0
+taken loop    body=10 : LPB used  220/ 220, LPB misses 0, total misses 0
+taken loop    body=20 : LPB used  420/ 420, LPB misses 0, total misses 0
+taken loop    body=40 : LPB used  820/ 820, LPB misses 0, total misses 0
+taken loop    body=62 : LPB used 1260/1260, LPB misses 0, total misses 0
+taken loop    body=63 : LPB used 1280/1280, LPB misses 0, total misses 0
+not-taken loop body=12 : LPB used  260/ 260, LPB misses 0
+too-long loops (64, 100): LPB never used
+trip count 8 -> 11       : 1 miss, re-learned after 3 confirming runs
+LPB index/tag fields, aliasing and LRU replacement OK
+end-to-end, 1000 runs of a 30-iteration loop: loop-branch misses 1607 without LPB, 0 with LPB
+
+PASS: all 27 loop predictor checks.
